@@ -1,0 +1,13 @@
+name:1.0$(Rev:.r)
+trigger:
+- main
+variables:
+ name:John
+pool:
+ vmImage:ubuntu-latest
+jobs:
+- job:helloworld
+  steps:
+   - checkout:self
+   - script:echo "Hello $(name)"
+  
